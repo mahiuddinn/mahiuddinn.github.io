@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Nothing here is private or worth crawling; everything should be indexable.
+# Add disallow rules only if you create a private folder later.
+
+Sitemap: https://mahiuddin.com/sitemap.xml

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600" role="img" aria-label="Placeholder for Mahiuddin Mahi's profile photo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13283b"/>
+      <stop offset="1" stop-color="#081320"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ee0a8"/>
+      <stop offset="1" stop-color="#0e9c6a"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" rx="28" fill="url(#bg)"/>
+  <rect x="1" y="1" width="478" height="598" rx="27" fill="none" stroke="#97bbdc" stroke-opacity=".22"/>
+  <circle cx="240" cy="215" r="58" fill="none" stroke="url(#ring)" stroke-width="6"/>
+  <path d="M140 420c14-62 51-92 100-92s86 30 100 92" fill="none" stroke="url(#ring)" stroke-width="6" stroke-linecap="round"/>
+  <text x="240" y="492" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="21" font-weight="600" fill="#a3b6c9">Your photo goes here</text>
+  <text x="240" y="524" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#7f94a8">replace /assets/images/profile.jpg</text>
+</svg>
