@@ -1,6 +1,7 @@
 # mahiuddin.com — Portfolio Website (static, no build step)
 
-A complete, bilingual (English + বাংলা) personal website for **Mahiuddin Mahi — SEO &amp; Contextual Link Building Specialist**.
+A complete personal website for **Mahiuddin Mahi — SEO &amp; Contextual Link Building Specialist**: the professional
+site is English-only, and `/bn/` is a separate Bangla personal blog (travel and everyday writing, not service pages).
 
 Pure HTML5 + CSS3 + vanilla JavaScript. No WordPress, no React, no Node.js build, no database, no paid plugins.
 Upload it as-is to GitHub Pages, Cloudflare Pages, or any cPanel shared hosting.
@@ -11,7 +12,7 @@ Upload it as-is to GitHub Pages, Cloudflare Pages, or any cPanel shared hosting.
 
 ```
 mahiuddin-website/
-├── index.html                     English homepage
+├── index.html                     English homepage (SEO &amp; link building)
 ├── about/index.html               About
 ├── services/index.html            6 services (with #anchors per service)
 ├── portfolio/index.html           4 labelled SAMPLE projects
@@ -19,13 +20,9 @@ mahiuddin-website/
 ├── blog/index.html                English article listing
 ├── blog/contextual-link-insertion/index.html   English article
 │
-├── bn/index.html                  বাংলা homepage
-├── bn/about/index.html            আমার সম্পর্কে
-├── bn/services/index.html         সেবা
-├── bn/portfolio/index.html        পোর্টফোলিও
-├── bn/contact/index.html          যোগাযোগ
-├── bn/blog/index.html             বাংলা ব্লগ
-├── bn/blog/contextual-link-insertion/index.html  বাংলা আর্টিকেল
+├── bn/index.html                  বাংলা personal blog — post listing (home of the blog)
+├── bn/<slug>/index.html           প্রতিটি বাংলা post: একটা folder = একটা post
+│                                  যেমন bn/tilottama/index.html → mahiuddin.com/bn/tilottama/
 │
 ├── assets/
 │   ├── css/style.css              One stylesheet (mobile-first, 17 labelled sections)
@@ -34,7 +31,7 @@ mahiuddin-website/
 │   ├── icons/favicon.svg
 │   └── images/                    og-image.png, profile placeholder
 │
-├── sitemap.xml                    All 14 URLs + hreflang alternates
+├── sitemap.xml                    All 8 URLs (7 English + বাংলা blog home)
 ├── robots.txt
 ├── 404.html
 ├── .nojekyll                      GitHub Pages: skip Jekyll
@@ -174,30 +171,45 @@ discard those submissions automatically.
 
 ---
 
-## 6. Adding a new blog post (English + Bangla)
+## 6. Adding a new post
 
-Copy this pattern — it is exactly how the two shipped articles are built.
+Two kinds of writing live on this domain, kept apart on purpose:
 
-1. Create the folders/files:
-   - `blog/<slug>/index.html`
-   - `bn/blog/<slug>/index.html` (same slug in both languages, so hreflang pairing stays obvious)
-2. Copy the existing article file and change:
+| What | Folder | Language | Listed on |
+|------|--------|----------|-----------|
+| SEO / link building guide | `blog/<slug>/` | English | `blog/index.html` |
+| Personal writing (travel, everyday) | `bn/<slug>/` | Bangla | `bn/index.html` |
+
+### 6.1 English SEO article
+
+Copy this pattern — it is exactly how the shipped article is built.
+
+1. Create `blog/<slug>/index.html` (copy `blog/contextual-link-insertion/index.html` into the new folder).
+2. Change in the copy:
    - visible text, `<title>` (≤ 60 chars), `meta description` (≤ 160 chars)
    - `canonical` → the new URL
-   - the 3 `hreflang` lines → **both** versions of this article + `x-default` (English)
    - Open Graph + Twitter tags, `article:published_time`, `article:modified_time`
-   - the `BlogPosting` JSON-LD: `headline`, `datePublished`, `dateModified`, `image`, `workTranslation` (English page)
-     / `translationOf` (Bangla page)
+   - the `BlogPosting` JSON-LD: `headline`, `datePublished`, `dateModified`, `image`
    - the `.toc` links and matching `<h2 id="...">` ids, breadcrumbs, author card, share links, related reading
    - reading time: total visible words ÷ 200, rounded
-3. Add the post card to `blog/index.html` **and** `bn/blog/index.html`.
-4. Add both URLs to `sitemap.xml` (with the paired `xhtml:link` alternates), and bump `<lastmod>`.
+3. Add the post card to `blog/index.html` (newest first).
+4. Add the URL to `sitemap.xml` and bump `<lastmod>`.
 5. If a post has a photo, put it in `assets/images/` and always write a descriptive `alt` — not "image".
 
-Rules that keep the bilingual SEO correct:
-- One URL per language, never mixed-language paragraphs on the same page.
-- `hreflang` must be **reciprocal**: the EN page lists EN + BN + x-default, and the BN page lists BN + EN + x-default.
-- Canonical always points to the page you are on, in its own language — never across languages.
+### 6.2 Bangla personal post
+
+1. Create the folder `bn/<slug>/` — lowercase English slug, hyphens instead of spaces (`bn/tilottama/`).
+2. Copy an existing page into that folder as `index.html`. Until the first post exists, copy `bn/index.html`;
+   then ask for it to be turned into a post page (the listing card markup and the empty-state box come out,
+   a `BlogPosting` block goes in).
+3. Keep `<html lang="bn">`, `og:locale` = `bn_BD`, Noto Sans Bengali `<link>`, and the `/assets/...` paths unchanged.
+4. Add the post card to `bn/index.html` (newest first) and add the URL to `sitemap.xml`.
+
+Rules that keep the SEO correct:
+- **No `hreflang` anywhere.** The Bangla blog is not a translation of the English site, so pairing them would be a lie
+  to Google. Each page only declares its own `canonical`.
+- One URL per page, one language per page — no mixed-language paragraphs.
+- Never publish a number, ranking, client name or date you cannot prove. Sample work stays labelled *Sample Project*.
 
 ---
 
@@ -230,7 +242,7 @@ Rules that keep the bilingual SEO correct:
    `<head>` of `index.html` and commit.
 3. Verify (it can take minutes to hours), then **Sitemaps** → enter `sitemap.xml` → **Submit**.
 4. **URL Inspection** → paste `https://mahiuddin.com/` → **Request indexing**. Repeat for `/services/` and `/contact/`.
-   Do not submit all 14 pages at once; Google crawls fine on its own.
+   Do not submit all 8 pages at once; Google crawls fine on its own.
 5. Also submit to [bingwebmasters.microsoft.com](https://bingwebmasters.microsoft.com) — it takes 2 minutes and Bing feeds
    ChatGPT's answers.
 6. After ~2–4 weeks check **Pages → Indexed** and see which queries bring impressions. That data is worth more than guessing.
@@ -271,7 +283,8 @@ on day one.
 6. Search Console-এ Domain property Add → TXT record দাও → `sitemap.xml` Submit করো।
 7. Form এখন mailto হিসেবে কাজ করবে (কোনো ডেটাবেস নেই, সাইট কিছু store করে না)। চাইলে FormSubmit/Formspree-এর
    endpoint `config.js`-এ বসাও — তাহলে সরাসরি ইনবক্সে আসবে।
-8. নতুন লেখা: `blog/slug/index.html` + `bn/blog/slug/index.html`, তারপর দুইটাই `sitemap.xml`-এ যোগ করো।
+8. নতুন English SEO article: `blog/slug/index.html`। নতুন বাংলা personal post: `bn/slug/index.html` (section 6 দেখো)।
+   দুটোর একটাই `sitemap.xml`-এ URL যোগ করো — `hreflang` আর দিতে হয় না, কারণ বাংলা ব্লগ English সাইটের অনুবাদ না।
 
 ---
 

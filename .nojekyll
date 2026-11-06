@@ -1,1 +1,2 @@
-
+# Tells GitHub Pages to serve this repository as plain static files
+# (skips Jekyll processing entirely). Safe to keep for Cloudflare Pages too.

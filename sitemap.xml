@@ -1,133 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ============================ ENGLISH ============================ -->
+  <!-- ==================== ENGLISH — SEO & link building ==================== -->
   <url>
     <loc>https://mahiuddin.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/"/>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/"/>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://mahiuddin.com/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/about/"/>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mahiuddin.com/services/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/services/"/>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/services/"/>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mahiuddin.com/portfolio/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/portfolio/"/>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/portfolio/"/>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mahiuddin.com/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/contact/"/>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/contact/"/>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mahiuddin.com/blog/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/blog/"/>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/blog/"/>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://mahiuddin.com/blog/contextual-link-insertion/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/blog/contextual-link-insertion/"/>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/blog/contextual-link-insertion/"/>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- ============================ BENGALI ============================ -->
+  <!-- ==================== বাংলা personal blog ====================
+       নতুন post প্রকাশ করলে নিচের <url> block-টা copy করুন, <loc> বদলান,
+       lastmod-এ আজকের তারিখ দিন (YYYY-MM-DD)। hreflang দিতে হবে না —
+       এই ব্লগের কোনো English translation নেই। -->
   <url>
     <loc>https://mahiuddin.com/bn/</loc>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/"/>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mahiuddin.com/bn/about/</loc>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/about/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/about/"/>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://mahiuddin.com/bn/services/</loc>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/services/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/services/"/>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mahiuddin.com/bn/portfolio/</loc>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/portfolio/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/portfolio/"/>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://mahiuddin.com/bn/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/contact/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/contact/"/>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mahiuddin.com/bn/blog/</loc>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/blog/"/>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://mahiuddin.com/bn/blog/contextual-link-insertion/</loc>
-    <xhtml:link rel="alternate" hreflang="bn" href="https://mahiuddin.com/bn/blog/contextual-link-insertion/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mahiuddin.com/blog/contextual-link-insertion/"/>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
