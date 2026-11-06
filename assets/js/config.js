@@ -12,8 +12,7 @@ window.SITE_CONFIG = {
   location: "Bangladesh",
 
   /* --- Contact ----------------------------------------------------------- */
-  // CHANGE THIS: it powers every mailto: link, the contact page and the footer.
-  email: "hello@mahiuddin.com",
+  email: "iammahiuddin@gmail.com",
 
   // CHANGE THIS: your Fiverr gig/profile URL. Example: https://www.fiverr.com/yourusername
   fiverrUrl: "",

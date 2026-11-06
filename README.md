@@ -50,8 +50,8 @@ Open **`assets/js/config.js`** first. It is the only file you *must* edit.
 
 | # | What | Where | Look for |
 |---|------|-------|----------|
-| 1 | **Email address** | `assets/js/config.js` | `email: "hello@mahiuddin.com"` |
-| 2 | Same email, hard-coded fallbacks | every `*.html` (search-replace) | `hello@mahiuddin.com` — appears in `mailto:` links and in the JSON-LD on the About page. Do one project-wide find &amp; replace so the markup and the config agree. |
+| 1 | **Email address** | `assets/js/config.js` | ✅ already set to `iammahiuddin@gmail.com`. Note `hello@mahiuddin.com` is deliberately **not** used — the domain has no MX records, so mail sent there bounces. |
+| 2 | Same email, hard-coded fallbacks | every `*.html` | ✅ replaced everywhere (mailto links, visible footer text, About JSON-LD). If you ever change it again, update `config.js` **and** run one project-wide find &amp; replace so markup and config agree. |
 | 3 | **Fiverr profile URL** | `assets/js/config.js` | `fiverrUrl: ""` |
 | 4 | LinkedIn / X / GitHub / WhatsApp | `assets/js/config.js` | `linkedinUrl`, `twitterUrl`, `githubUrl`, `whatsappNumber` — leave `""` and the button disappears automatically |
 | 5 | **Profile photo** | `assets/images/` | Add `profile.jpg` (square or 4:5, ~800px wide, under 150 KB). Then in `about/index.html` and the blog pages, replace the `profile-placeholder.svg` `<img>` (an HTML comment shows the exact replacement line). |
@@ -275,11 +275,12 @@ on day one.
 
 ## 10. দ্রুত শুরু (বাংলা সংক্ষেপ)
 
-1. `assets/js/config.js` ফাইলে তোমার **email** আর **Fiverr URL** বসাও। এটাই আসল কাজ।
-2. `hello@mahiuddin.com` টেক্সটটা সব HTML ফাইলে Search → Replace করে নিজের ইমেইল দিয়ে দাও (JSON-LD-তেও আছে)।
-3. GitHub-এ repo বানাও → `mahiuddin-website` ফোল্ডারের **ভেতরের ফাইলগুলো** (ফোল্ডারটা নয়) drag &amp; drop করো → Commit।
-4. Settings → Pages → Branch: `main` / `/ (root)` → Save। এরপর Custom domain-এ `mahiuddin.com` লেখো।
-5. DNS-এ ৪টা A record (GitHub-এর IP) + `www` CNAME বসাও → সবুজ টিক দেখলে **Enforce HTTPS** on।
+1. ✅ ইমেইল (`iammahiuddin@gmail.com`) বসানো হয়েছে, live সাইটেও আছে। বাকি শুধু **Fiverr URL** — সেটা না দিলে Fiverr বাটনটা নিজে থেকেই লুকিয়ে থাকে।
+2. ✅ সাইট deploy হয়ে গেছে এবং এখন agent সরাসরি git দিয়ে edit + push করে। আগের drag &amp; drop upload-এর দরকার নেই, আর upload-এর একটা
+   বড় ঝামেলা ছিল — সেটা পুরনো ফাইল **মোছে না**, শুধু নতুন/বদলানো ফাইল বসায়।
+3. চাইলে github.com → Code → `.` চেপে github.dev-এ ফাইল দেখতে পাবে, কিন্তু edit করো না — দুই জায়গায় একসময় edit করলে
+   একটার কাজ মুছে যাবে। সব edit agent-এর হাত দিয়েই হবে।
+4. Release-ready হলে: সব পেজ থেকে `noindex` তুলে `sitemap.xml` Search Console-এ submit করতে হবে (এখনো হয়নি)।
 6. Search Console-এ Domain property Add → TXT record দাও → `sitemap.xml` Submit করো।
 7. Form এখন mailto হিসেবে কাজ করবে (কোনো ডেটাবেস নেই, সাইট কিছু store করে না)। চাইলে FormSubmit/Formspree-এর
    endpoint `config.js`-এ বসাও — তাহলে সরাসরি ইনবক্সে আসবে।
